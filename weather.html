@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="/weather.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  </head>
+
+  <body>
+    <main class="main-img container-fluid">
+      <main class="row">
+        <section class="col-12 m-auto">
+          <!-- search location start -->
+          <div class="mb-2 mt-2 d-flex justify-content-end text-white-50">
+            <input
+              type="text"
+              id="search"
+              class="form-control bg-dark-subtle bg-opacity-175 w-25 border-1 border-opacity-10 border-light rounded-4 text-black"
+              placeholder="Search For Location"
+              required />
+            <button id="btn" class="mt-1 ms-2 button py-1 px-2">Search</button>
+          </div>
+          <!-- search location end -->
+
+          <main class="d-flex flex-column justify-content-center align-items-center">
+            <!--name section start -->
+            <section class="w-50 d-flex flex-column align-items-center ps-3">
+              <div class="ms-4">
+                <span id="location" class="display-5 fw-medium text-white"></span>
+                <span class="h4 text-white">-</span>
+                <span id="country" class="h4 text-white"></span>
+              </div>
+              <div class="mt-3 mb-2">
+                <span id="temp" class="text-white h1 fw-medium"></span>
+              </div>
+              <div id="condition" class="mb-1">
+                <!-- icon logo -->
+                <img
+                  id="icon"
+                  class="image fw-medium"
+                  src="/images/weather icons/cloudy (1).png"
+                  alt="" />
+              </div>
+              <div class="mb-4">
+                <h3 id="main" class="text-white">Cloudy</h3>
+                <!-- clouds condition -->
+              </div>
+            </section>
+            <!-- name section end -->
+
+            <!--other info section start  -->
+            <section class="d-flex justify-content-center mt-1 mb-1 text-white me-4">
+              <div class="mx-4">
+                <img class="humidityicon" src="/images/small icons/humidity.png" alt="" />
+                <span id="humidity" class="text-white h5"></span>
+                <h6 class="text-white">Humidity</h6>
+              </div>
+
+              <div class="mx-4">
+                <img class="humidityicon" src="/images/small icons/cold.png" alt="" />
+                <span id="feels" class="text-white h5"></span>
+                <h6 class="ps-3">Feels like</h6>
+                <!-- put font awesome deg c-->
+              </div>
+
+              <div class="mx-4">
+                <img class="smallicons me-1" src="/images/small icons/wind speed.png" alt="" />
+                <span class="text-white h5" id="windSpeed"></span>
+                <h6 class="ms-4">Wind Speed</h6>
+              </div>
+            </section>
+            <!--other info section end -->
+          </main>
+
+          <article class="text-white d-flex justify-content-evenly h6 w-75 m-auto mt-3 more-info">
+            <div class="ps-3 moreinfo1 py-2">
+              <div class="me-3 my-3">
+                <!-- <img class="smallicons2  " src="/images/small icons/low-temperature.png" alt=""> -->
+                <span class=""
+                  >min temp:
+                  <span id="mintemp"></span>
+                </span>
+              </div>
+
+              <div class="me-3">
+                <!-- <img class="smallicons2  " src="/images/small icons/high-temperature.png" alt=""> -->
+                <span>max temp: <span id="maxtemp"></span></span>
+              </div>
+
+              <div class="me-3 my-3">
+                <!-- <img class="smallicons2  " src="/images/small icons/weather.png" alt=""> -->
+                <span>description: <span id="description"></span></span>
+              </div>
+            </div>
+
+            <div class="ps-3 moreinfo2 py-2">
+              <div class="me-3 my-3">
+                <!-- <img class="smallicons2  " src="/images/small icons/sunrise.png" alt=""> -->
+                <span>sunrise: <span id="sunrise"></span></span>
+              </div>
+
+              <div class="me-3">
+                <!-- <img class="smallicons2  " src="/images/small icons/sunset-.png" alt=""> -->
+                <span>sunset: <span id="sunset"></span></span>
+              </div>
+
+              <div class="me-3 my-3">
+                <!-- <img class="smallicons2  " src="/images/small icons/atmospheric.png" alt=""> -->
+                <span>Pressure: <span id="Pressure"></span></span>
+              </div>
+            </div>
+          </article>
+          <p class="fw-bold mb-0 text-black">
+            Note: This Time Zone is as per the Indian Standard Time (IST)
+          </p>
+        </section>
+      </main>
+    </main>
+
+    <script src="/js/weather.js"></script>
+  </body>
+</html>
